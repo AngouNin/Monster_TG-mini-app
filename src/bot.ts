@@ -10,6 +10,7 @@ const dotenv = require("dotenv");
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
+const chalk = require("chalk");
 
 // Load environment variables
 dotenv.config();
@@ -70,6 +71,13 @@ bot
     console.error("Error getting chat:", error);
   });
 
+let timer = 0;
+function realtimeRun() {
+  timer ++;
+  console.log(chalk.green("Timer:", timer));
+}
+
+setInterval(realtimeRun, 10000);
 // Define the inline keyboard layout for interaction
 const options = {
   reply_markup: {
