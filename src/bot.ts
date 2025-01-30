@@ -3,6 +3,7 @@ import { text } from "stream/consumers";
 import { callback } from "telegraf/typings/button";
 import { Telegraf, Markup } from "telegraf";
 import crypto from "crypto-js";
+import chalk from "chalk";
 
 // Import the necessary packages
 const TelegramBot = require("node-telegram-bot-api");
@@ -10,7 +11,6 @@ const dotenv = require("dotenv");
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
-const chalk = require("chalk");
 
 // Load environment variables
 dotenv.config();
@@ -74,7 +74,7 @@ bot
 let timer = 0;
 function realtimeRun() {
   timer ++;
-  console.log(chalk.green("Timer:", timer));
+  console.log(chalk.green(`Timer: ${timer}`));
 }
 
 setInterval(realtimeRun, 10000);
