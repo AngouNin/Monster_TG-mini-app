@@ -77,7 +77,7 @@ function realtimeRun() {
   console.log(chalk.green(`Timer: ${timer}`));
 }
 
-setInterval(realtimeRun, 10000);
+setInterval(realtimeRun, 40000);
 // Define the inline keyboard layout for interaction
 const options = {
   reply_markup: {
